@@ -2,4 +2,7 @@ This project was conducted based on the fluctuations in the price of rupiah (IDR
 
 The SVR model was built in RStudio with linear, third-degree polynomial, and RBF kernel to compare the performance of different parameter values used on the model. Main packages used in this project are e1071 and caret. Training data consist of daily closing price during the year 2016-2019 and 2020-2021 for testing. After building the model, Time Series K-Fold Cross Validation (TS-CV) is used to improve the performance of each model built. The result shows that SVR model with RBF kernel performs best with the optimal parameter values obtained. Then, the model is used to predict 20 days ahead (assuming 1 month has 20 active trading days) during January 2022. The RMSE and MAPE values for the model with RBF kernel are 0.04192824 and 0.05510829. 
 
-The code to build the model and applying TS-CV is in the file PersonalProject.R. After obtaining the results, a simple app is built using shiny package that can be found in the file PersonalProject-App.R.
+The code to build the model and applying TS-CV is in the file PersonalProject.R. After obtaining the results, a simple app is built using shiny package that can be found in the file PersonalProject-App.R. The purpose of this app is to show how the changes of parameter values and kernel type affects the model performance, model shape, and prediction result. 
+
+IMPORTANT
+To use the app, input only real non-negative values for each kernel type. If the model does not show, the parameter used can't show the regression model since it only has ylim value from 13500 to 16500, the model may be far above or below the data scatterplot. 
