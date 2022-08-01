@@ -4,5 +4,5 @@ The SVR model was built in RStudio with linear, third-degree polynomial, and RBF
 
 The code to build the model and applying TS-CV is in the file PersonalProject.R. After obtaining the results, a simple app is built using shiny package that can be found in the file PersonalProject-App.R. The purpose of this app is to show how the changes of parameter values and kernel type affects the model performance, model shape, and prediction result. 
 
-IMPORTANT
+IMPORTANT!
 To use the app, input only real non-negative values for each kernel type. If the model does not show, the parameter used can't show the regression model since it only has ylim value from 13500 to 16500, the model may be far above or below the data scatterplot. 
